@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('paises', function(){
+});
+
+Route::get('prueba', function(){
+    return view('productos.create');
 });
