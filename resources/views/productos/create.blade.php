@@ -89,7 +89,7 @@
       <div class="file">
       <div class="file-field input-field">
       <div class="btn">
-        <span>Ingfrese Imagen</span>
+        <span>Ingrese Imagen</span>
       <input type="file" name="imagen" multiple>
       </div>
 

@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Categoria extends Model
 {
     use HasFactory;
+
+    //extender modelo para relacionarlo con producto
+    public function producto(){
+        //1 categoria - M productos
+        return $this->hasMany(Producto::class);
+    }
 }

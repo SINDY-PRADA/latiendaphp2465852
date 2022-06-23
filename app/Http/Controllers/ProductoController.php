@@ -18,7 +18,12 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        echo"aqui llegan los datos del formulario";
+        //Seleccionar todos los productos 
+        $productos=Producto::all();
+        //mostrar una vista del catalogo de productos
+        //llevando la lista de productos
+        return view('productos.index')
+        ->with('productos', $productos);
     }
 
     /**
@@ -51,7 +56,7 @@ class ProductoController extends Controller
         //1.establecer reglas de validacion
         $reglas=[
             "nombre" => 'required|alpha|unique:productos,nombre',
-            "desc" => 'required|min:5|max:20',
+            "desc" => 'required|min:100|max:20',
             "precio" => 'required|numeric',
             "imagen" => 'required|image',
             "marca" => 'required',

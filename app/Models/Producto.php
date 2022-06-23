@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Producto extends Model
 {
     use HasFactory;
+
+    //relacion M - 1 con categoria
+    public function categoria(){
+        return $this->belongsTo(categoria::class);
+   
+    }
+    use HasFactory;
+
+    //relacion M - 1 con categoria
+    public function marca(){
+        return $this->belongsTo(categoria::class);
+   
+    }
 }
